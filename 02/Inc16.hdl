@@ -13,5 +13,21 @@ CHIP Inc16 {
     OUT out[16];
 
     PARTS:
-   // Put you code here:
+    Not(in=false, out=n0);
+    Not(in=true, out=n1);
+    Not(in=true, out=n2);
+    Not(in=true, out=n3);
+    Not(in=true, out=n4);
+    Not(in=true, out=n5);
+    Not(in=true, out=n6);
+    Not(in=true, out=n7);
+    Not(in=true, out=n8);
+    Not(in=true, out=n9);
+    Not(in=true, out=n10);
+    Not(in=true, out=n11);
+    Not(in=true, out=n12);
+    Not(in=true, out=n13);
+    Not(in=true, out=n14);
+    Not(in=true, out=n15);
+    Add16(a=in, b[0]=n0, b[1]=n1, b[2]=n2, b[3]=n3, b[4]=n4, b[5]=n5, b[6]=n6, b[7]=n7, b[8]=n8, b[9]=n9, b[10]=n10, b[11]=n11, b[12]=n12, b[13]=n13, b[14]=n14, b[15]=n15, out=out);
 }
