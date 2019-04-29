@@ -16,5 +16,22 @@ CHIP PC {
     OUT out[16];
 
     PARTS:
-    // Put your code here:
+    // 謎の別解 - Mux4Way16にこだわった結果
+    // Or(a=reset, b=load, out=forsel1);
+    // Not(in=load, out=nload);
+    // And(a=nload, b=inc, out=nloadinc);
+    // Or(a=reset, b=nloadinc, out=forsel0);
+    // Mux4Way16(a=regout, b=incout, c=in, d=false, sel[0]=forsel0, sel[1]=forsel1, out=mout);
+
+    // Or(a=forsel0, b=forsel1, out=rload);
+
+    // Register(in=mout, load=rload, out=out, out=regout);
+    // Inc16(in=regout, out=incout);
+
+    // 素直な解
+    Inc16(in=feedback, out=incout);
+    Mux16(a=feedback, b=incout, sel=inc, out=m1);
+    Mux16(a=m1, b=in, sel=load, out=m2);
+    Mux16(a=m2, b=false, sel=reset, out=m3);
+    Register(in=m3, load=true, out=feedback, out=out);
 }
