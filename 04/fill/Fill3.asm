@@ -17,8 +17,18 @@
 D=A
 @screensize
 M=D
+@colorbefore
+M=0
+@colorafter
+M=0
 
 (LOOP)
+    // update color
+    @colorafter
+    D=M
+    @colorbefore
+    M=D
+
     // initialize pointer
     @SCREEN
     D=A
@@ -40,8 +50,33 @@ M=D
     @LOOP
     0;JMP
 
+(BLACKOUT)
+    @colorbefore
+    D=M
+    @colorafter
+    M=-1
+    D=D-M
+
+    @CHANGESCREEN
+    D;JNE
+
+    @LOOP
+    0;JMP
+
 (WHITEOUT)
-    // break if address = SCREEN + screensize
+    @colorbefore
+    D=M
+    @colorafter
+    M=0
+
+    @CHANGESCREEN
+    D;JNE
+
+    @LOOP
+    0;JMP
+
+(CHANGESCREEN)
+    // loop finish if address = SCREEN + screensize
     @screensize
     D=M
     @i
@@ -50,10 +85,11 @@ M=D
     D;JEQ
 
     // set zero
-    @address
+    @colorafter
     D=M
-    A=D
-    M=0
+    @address
+    A=M
+    M=D
 
     // update address
     @address
@@ -64,32 +100,5 @@ M=D
     M=M+1
 
     // loop
-    @WHITEOUT
-    0;JMP
-
-(BLACKOUT)
-    // break if address = SCREEN + screensize
-    @screensize
-    D=M
-    @i
-    D=M-D
-    @LOOP
-    D;JEQ
-
-    // set one
-    @address
-    D=M
-    A=D
-    M=!M
-
-    // update address
-    @address
-    M=M+1
-
-    // update loop count
-    @i
-    M=M+1
-
-    // loop
-    @BLACKOUT
+    @CHANGESCREEN
     0;JMP
