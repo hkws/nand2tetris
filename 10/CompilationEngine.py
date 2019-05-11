@@ -44,12 +44,20 @@ class CompilationEngine():
         dom = xml.dom.minidom.parseString(sfied)
         pretty_xml_str = dom.toprettyxml()
         cleaned = []
+        # TextComparer.shのための微修正
         # 1行目のxmlversionの記述を除去
         # 空行を除去
+        # expressionList, parameterListは中に改行を入れる
         for line in pretty_xml_str.split("\n"):
             if '?xml' in line:
                 continue
             if line.strip() == "":
+                continue
+            if ("expressionList" in line or "parameterList" in line) and ">  <" in line:
+                tag = "expressionList" if "expressionList" in line else "parameterList"
+                idx = line.find("<")
+                cleaned.append(line[:idx] + "<{}>".format(tag))
+                cleaned.append(line[:idx] + "</{}>".format(tag))
                 continue
             cleaned.append(line)
         return "\n".join(cleaned)
