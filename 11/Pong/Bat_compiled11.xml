@@ -1,0 +1,1337 @@
+<class>
+	<keyword> class </keyword>
+	<identifier>
+		<name> Bat </name>
+		<type> className </type>
+		<fieldCount> 5 </fieldCount>
+	</identifier>
+	<symbol> { </symbol>
+	<classVarDec>
+		<keyword> field </keyword>
+		<keyword> int </keyword>
+		<identifier>
+			<name> x </name>
+			<type> int </type>
+			<index> 0 </index>
+			<kind> field </kind>
+		</identifier>
+		<symbol> , </symbol>
+		<identifier>
+			<name> y </name>
+			<type> int </type>
+			<index> 1 </index>
+			<kind> field </kind>
+		</identifier>
+		<symbol> ; </symbol>
+	</classVarDec>
+	<classVarDec>
+		<keyword> field </keyword>
+		<keyword> int </keyword>
+		<identifier>
+			<name> width </name>
+			<type> int </type>
+			<index> 2 </index>
+			<kind> field </kind>
+		</identifier>
+		<symbol> , </symbol>
+		<identifier>
+			<name> height </name>
+			<type> int </type>
+			<index> 3 </index>
+			<kind> field </kind>
+		</identifier>
+		<symbol> ; </symbol>
+	</classVarDec>
+	<classVarDec>
+		<keyword> field </keyword>
+		<keyword> int </keyword>
+		<identifier>
+			<name> direction </name>
+			<type> int </type>
+			<index> 4 </index>
+			<kind> field </kind>
+		</identifier>
+		<symbol> ; </symbol>
+	</classVarDec>
+	<subroutineDec>
+		<keyword> constructor </keyword>
+		<identifier>
+			<name> Bat </name>
+			<type> className </type>
+		</identifier>
+		<identifier>
+			<name> new </name>
+			<type> subroutineName </type>
+			<localCount> 0 </localCount>
+		</identifier>
+		<symbol> ( </symbol>
+		<parameterList>
+			<keyword> int </keyword>
+			<identifier>
+				<name> Ax </name>
+				<type> int </type>
+				<index> 0 </index>
+				<kind> argument </kind>
+			</identifier>
+			<symbol> , </symbol>
+			<keyword> int </keyword>
+			<identifier>
+				<name> Ay </name>
+				<type> int </type>
+				<index> 1 </index>
+				<kind> argument </kind>
+			</identifier>
+			<symbol> , </symbol>
+			<keyword> int </keyword>
+			<identifier>
+				<name> Awidth </name>
+				<type> int </type>
+				<index> 2 </index>
+				<kind> argument </kind>
+			</identifier>
+			<symbol> , </symbol>
+			<keyword> int </keyword>
+			<identifier>
+				<name> Aheight </name>
+				<type> int </type>
+				<index> 3 </index>
+				<kind> argument </kind>
+			</identifier>
+		</parameterList>
+		<symbol> ) </symbol>
+		<subroutineBody>
+			<symbol> { </symbol>
+			<statements>
+				<letStatement>
+					<keyword> let </keyword>
+					<identifier>
+						<name> x </name>
+						<type> int </type>
+						<index> 0 </index>
+						<kind> field </kind>
+					</identifier>
+					<symbol> = </symbol>
+					<expression>
+						<term>
+							<identifier>
+								<name> Ax </name>
+								<type> int </type>
+								<index> 0 </index>
+								<kind> argument </kind>
+							</identifier>
+						</term>
+					</expression>
+					<symbol> ; </symbol>
+				</letStatement>
+				<letStatement>
+					<keyword> let </keyword>
+					<identifier>
+						<name> y </name>
+						<type> int </type>
+						<index> 1 </index>
+						<kind> field </kind>
+					</identifier>
+					<symbol> = </symbol>
+					<expression>
+						<term>
+							<identifier>
+								<name> Ay </name>
+								<type> int </type>
+								<index> 1 </index>
+								<kind> argument </kind>
+							</identifier>
+						</term>
+					</expression>
+					<symbol> ; </symbol>
+				</letStatement>
+				<letStatement>
+					<keyword> let </keyword>
+					<identifier>
+						<name> width </name>
+						<type> int </type>
+						<index> 2 </index>
+						<kind> field </kind>
+					</identifier>
+					<symbol> = </symbol>
+					<expression>
+						<term>
+							<identifier>
+								<name> Awidth </name>
+								<type> int </type>
+								<index> 2 </index>
+								<kind> argument </kind>
+							</identifier>
+						</term>
+					</expression>
+					<symbol> ; </symbol>
+				</letStatement>
+				<letStatement>
+					<keyword> let </keyword>
+					<identifier>
+						<name> height </name>
+						<type> int </type>
+						<index> 3 </index>
+						<kind> field </kind>
+					</identifier>
+					<symbol> = </symbol>
+					<expression>
+						<term>
+							<identifier>
+								<name> Aheight </name>
+								<type> int </type>
+								<index> 3 </index>
+								<kind> argument </kind>
+							</identifier>
+						</term>
+					</expression>
+					<symbol> ; </symbol>
+				</letStatement>
+				<letStatement>
+					<keyword> let </keyword>
+					<identifier>
+						<name> direction </name>
+						<type> int </type>
+						<index> 4 </index>
+						<kind> field </kind>
+					</identifier>
+					<symbol> = </symbol>
+					<expression>
+						<term>
+							<integerConstant> 2 </integerConstant>
+						</term>
+					</expression>
+					<symbol> ; </symbol>
+				</letStatement>
+				<doStatement>
+					<keyword> do </keyword>
+					<identifier>
+						<name> show </name>
+						<type> subroutineName </type>
+					</identifier>
+					<symbol> ( </symbol>
+					<expressionList>
+					</expressionList>
+					<symbol> ) </symbol>
+					<symbol> ; </symbol>
+				</doStatement>
+				<returnStatement>
+					<keyword> return </keyword>
+					<expression>
+						<term>
+							<keyword> this </keyword>
+						</term>
+					</expression>
+					<symbol> ; </symbol>
+				</returnStatement>
+			</statements>
+			<symbol> } </symbol>
+		</subroutineBody>
+	</subroutineDec>
+	<subroutineDec>
+		<keyword> method </keyword>
+		<keyword> void </keyword>
+		<identifier>
+			<name> dispose </name>
+			<type> subroutineName </type>
+			<localCount> 0 </localCount>
+		</identifier>
+		<symbol> ( </symbol>
+		<parameterList>
+		</parameterList>
+		<symbol> ) </symbol>
+		<subroutineBody>
+			<symbol> { </symbol>
+			<statements>
+				<doStatement>
+					<keyword> do </keyword>
+					<identifier>
+						<name> Memory </name>
+						<type> className </type>
+					</identifier>
+					<symbol> . </symbol>
+					<identifier>
+						<name> deAlloc </name>
+						<type> subroutineName </type>
+					</identifier>
+					<symbol> ( </symbol>
+					<expressionList>
+						<expression>
+							<term>
+								<keyword> this </keyword>
+							</term>
+						</expression>
+					</expressionList>
+					<symbol> ) </symbol>
+					<symbol> ; </symbol>
+				</doStatement>
+				<returnStatement>
+					<keyword> return </keyword>
+					<symbol> ; </symbol>
+				</returnStatement>
+			</statements>
+			<symbol> } </symbol>
+		</subroutineBody>
+	</subroutineDec>
+	<subroutineDec>
+		<keyword> method </keyword>
+		<keyword> void </keyword>
+		<identifier>
+			<name> show </name>
+			<type> subroutineName </type>
+			<localCount> 0 </localCount>
+		</identifier>
+		<symbol> ( </symbol>
+		<parameterList>
+		</parameterList>
+		<symbol> ) </symbol>
+		<subroutineBody>
+			<symbol> { </symbol>
+			<statements>
+				<doStatement>
+					<keyword> do </keyword>
+					<identifier>
+						<name> Screen </name>
+						<type> className </type>
+					</identifier>
+					<symbol> . </symbol>
+					<identifier>
+						<name> setColor </name>
+						<type> subroutineName </type>
+					</identifier>
+					<symbol> ( </symbol>
+					<expressionList>
+						<expression>
+							<term>
+								<keyword> true </keyword>
+							</term>
+						</expression>
+					</expressionList>
+					<symbol> ) </symbol>
+					<symbol> ; </symbol>
+				</doStatement>
+				<doStatement>
+					<keyword> do </keyword>
+					<identifier>
+						<name> draw </name>
+						<type> subroutineName </type>
+					</identifier>
+					<symbol> ( </symbol>
+					<expressionList>
+					</expressionList>
+					<symbol> ) </symbol>
+					<symbol> ; </symbol>
+				</doStatement>
+				<returnStatement>
+					<keyword> return </keyword>
+					<symbol> ; </symbol>
+				</returnStatement>
+			</statements>
+			<symbol> } </symbol>
+		</subroutineBody>
+	</subroutineDec>
+	<subroutineDec>
+		<keyword> method </keyword>
+		<keyword> void </keyword>
+		<identifier>
+			<name> hide </name>
+			<type> subroutineName </type>
+			<localCount> 0 </localCount>
+		</identifier>
+		<symbol> ( </symbol>
+		<parameterList>
+		</parameterList>
+		<symbol> ) </symbol>
+		<subroutineBody>
+			<symbol> { </symbol>
+			<statements>
+				<doStatement>
+					<keyword> do </keyword>
+					<identifier>
+						<name> Screen </name>
+						<type> className </type>
+					</identifier>
+					<symbol> . </symbol>
+					<identifier>
+						<name> setColor </name>
+						<type> subroutineName </type>
+					</identifier>
+					<symbol> ( </symbol>
+					<expressionList>
+						<expression>
+							<term>
+								<keyword> false </keyword>
+							</term>
+						</expression>
+					</expressionList>
+					<symbol> ) </symbol>
+					<symbol> ; </symbol>
+				</doStatement>
+				<doStatement>
+					<keyword> do </keyword>
+					<identifier>
+						<name> draw </name>
+						<type> subroutineName </type>
+					</identifier>
+					<symbol> ( </symbol>
+					<expressionList>
+					</expressionList>
+					<symbol> ) </symbol>
+					<symbol> ; </symbol>
+				</doStatement>
+				<returnStatement>
+					<keyword> return </keyword>
+					<symbol> ; </symbol>
+				</returnStatement>
+			</statements>
+			<symbol> } </symbol>
+		</subroutineBody>
+	</subroutineDec>
+	<subroutineDec>
+		<keyword> method </keyword>
+		<keyword> void </keyword>
+		<identifier>
+			<name> draw </name>
+			<type> subroutineName </type>
+			<localCount> 0 </localCount>
+		</identifier>
+		<symbol> ( </symbol>
+		<parameterList>
+		</parameterList>
+		<symbol> ) </symbol>
+		<subroutineBody>
+			<symbol> { </symbol>
+			<statements>
+				<doStatement>
+					<keyword> do </keyword>
+					<identifier>
+						<name> Screen </name>
+						<type> className </type>
+					</identifier>
+					<symbol> . </symbol>
+					<identifier>
+						<name> drawRectangle </name>
+						<type> subroutineName </type>
+					</identifier>
+					<symbol> ( </symbol>
+					<expressionList>
+						<expression>
+							<term>
+								<identifier>
+									<name> x </name>
+									<type> int </type>
+									<index> 0 </index>
+									<kind> field </kind>
+								</identifier>
+							</term>
+						</expression>
+						<symbol> , </symbol>
+						<expression>
+							<term>
+								<identifier>
+									<name> y </name>
+									<type> int </type>
+									<index> 1 </index>
+									<kind> field </kind>
+								</identifier>
+							</term>
+						</expression>
+						<symbol> , </symbol>
+						<expression>
+							<term>
+								<identifier>
+									<name> x </name>
+									<type> int </type>
+									<index> 0 </index>
+									<kind> field </kind>
+								</identifier>
+							</term>
+							<symbol> + </symbol>
+							<term>
+								<identifier>
+									<name> width </name>
+									<type> int </type>
+									<index> 2 </index>
+									<kind> field </kind>
+								</identifier>
+							</term>
+						</expression>
+						<symbol> , </symbol>
+						<expression>
+							<term>
+								<identifier>
+									<name> y </name>
+									<type> int </type>
+									<index> 1 </index>
+									<kind> field </kind>
+								</identifier>
+							</term>
+							<symbol> + </symbol>
+							<term>
+								<identifier>
+									<name> height </name>
+									<type> int </type>
+									<index> 3 </index>
+									<kind> field </kind>
+								</identifier>
+							</term>
+						</expression>
+					</expressionList>
+					<symbol> ) </symbol>
+					<symbol> ; </symbol>
+				</doStatement>
+				<returnStatement>
+					<keyword> return </keyword>
+					<symbol> ; </symbol>
+				</returnStatement>
+			</statements>
+			<symbol> } </symbol>
+		</subroutineBody>
+	</subroutineDec>
+	<subroutineDec>
+		<keyword> method </keyword>
+		<keyword> void </keyword>
+		<identifier>
+			<name> setDirection </name>
+			<type> subroutineName </type>
+			<localCount> 0 </localCount>
+		</identifier>
+		<symbol> ( </symbol>
+		<parameterList>
+			<keyword> int </keyword>
+			<identifier>
+				<name> Adirection </name>
+				<type> int </type>
+				<index> 1 </index>
+				<kind> argument </kind>
+			</identifier>
+		</parameterList>
+		<symbol> ) </symbol>
+		<subroutineBody>
+			<symbol> { </symbol>
+			<statements>
+				<letStatement>
+					<keyword> let </keyword>
+					<identifier>
+						<name> direction </name>
+						<type> int </type>
+						<index> 4 </index>
+						<kind> field </kind>
+					</identifier>
+					<symbol> = </symbol>
+					<expression>
+						<term>
+							<identifier>
+								<name> Adirection </name>
+								<type> int </type>
+								<index> 1 </index>
+								<kind> argument </kind>
+							</identifier>
+						</term>
+					</expression>
+					<symbol> ; </symbol>
+				</letStatement>
+				<returnStatement>
+					<keyword> return </keyword>
+					<symbol> ; </symbol>
+				</returnStatement>
+			</statements>
+			<symbol> } </symbol>
+		</subroutineBody>
+	</subroutineDec>
+	<subroutineDec>
+		<keyword> method </keyword>
+		<keyword> int </keyword>
+		<identifier>
+			<name> getLeft </name>
+			<type> subroutineName </type>
+			<localCount> 0 </localCount>
+		</identifier>
+		<symbol> ( </symbol>
+		<parameterList>
+		</parameterList>
+		<symbol> ) </symbol>
+		<subroutineBody>
+			<symbol> { </symbol>
+			<statements>
+				<returnStatement>
+					<keyword> return </keyword>
+					<expression>
+						<term>
+							<identifier>
+								<name> x </name>
+								<type> int </type>
+								<index> 0 </index>
+								<kind> field </kind>
+							</identifier>
+						</term>
+					</expression>
+					<symbol> ; </symbol>
+				</returnStatement>
+			</statements>
+			<symbol> } </symbol>
+		</subroutineBody>
+	</subroutineDec>
+	<subroutineDec>
+		<keyword> method </keyword>
+		<keyword> int </keyword>
+		<identifier>
+			<name> getRight </name>
+			<type> subroutineName </type>
+			<localCount> 0 </localCount>
+		</identifier>
+		<symbol> ( </symbol>
+		<parameterList>
+		</parameterList>
+		<symbol> ) </symbol>
+		<subroutineBody>
+			<symbol> { </symbol>
+			<statements>
+				<returnStatement>
+					<keyword> return </keyword>
+					<expression>
+						<term>
+							<identifier>
+								<name> x </name>
+								<type> int </type>
+								<index> 0 </index>
+								<kind> field </kind>
+							</identifier>
+						</term>
+						<symbol> + </symbol>
+						<term>
+							<identifier>
+								<name> width </name>
+								<type> int </type>
+								<index> 2 </index>
+								<kind> field </kind>
+							</identifier>
+						</term>
+					</expression>
+					<symbol> ; </symbol>
+				</returnStatement>
+			</statements>
+			<symbol> } </symbol>
+		</subroutineBody>
+	</subroutineDec>
+	<subroutineDec>
+		<keyword> method </keyword>
+		<keyword> void </keyword>
+		<identifier>
+			<name> setWidth </name>
+			<type> subroutineName </type>
+			<localCount> 0 </localCount>
+		</identifier>
+		<symbol> ( </symbol>
+		<parameterList>
+			<keyword> int </keyword>
+			<identifier>
+				<name> Awidth </name>
+				<type> int </type>
+				<index> 1 </index>
+				<kind> argument </kind>
+			</identifier>
+		</parameterList>
+		<symbol> ) </symbol>
+		<subroutineBody>
+			<symbol> { </symbol>
+			<statements>
+				<doStatement>
+					<keyword> do </keyword>
+					<identifier>
+						<name> hide </name>
+						<type> subroutineName </type>
+					</identifier>
+					<symbol> ( </symbol>
+					<expressionList>
+					</expressionList>
+					<symbol> ) </symbol>
+					<symbol> ; </symbol>
+				</doStatement>
+				<letStatement>
+					<keyword> let </keyword>
+					<identifier>
+						<name> width </name>
+						<type> int </type>
+						<index> 2 </index>
+						<kind> field </kind>
+					</identifier>
+					<symbol> = </symbol>
+					<expression>
+						<term>
+							<identifier>
+								<name> Awidth </name>
+								<type> int </type>
+								<index> 1 </index>
+								<kind> argument </kind>
+							</identifier>
+						</term>
+					</expression>
+					<symbol> ; </symbol>
+				</letStatement>
+				<doStatement>
+					<keyword> do </keyword>
+					<identifier>
+						<name> show </name>
+						<type> subroutineName </type>
+					</identifier>
+					<symbol> ( </symbol>
+					<expressionList>
+					</expressionList>
+					<symbol> ) </symbol>
+					<symbol> ; </symbol>
+				</doStatement>
+				<returnStatement>
+					<keyword> return </keyword>
+					<symbol> ; </symbol>
+				</returnStatement>
+			</statements>
+			<symbol> } </symbol>
+		</subroutineBody>
+	</subroutineDec>
+	<subroutineDec>
+		<keyword> method </keyword>
+		<keyword> void </keyword>
+		<identifier>
+			<name> move </name>
+			<type> subroutineName </type>
+			<localCount> 0 </localCount>
+		</identifier>
+		<symbol> ( </symbol>
+		<parameterList>
+		</parameterList>
+		<symbol> ) </symbol>
+		<subroutineBody>
+			<symbol> { </symbol>
+			<statements>
+				<ifStatement>
+					<keyword> if </keyword>
+					<symbol> ( </symbol>
+					<expression>
+						<term>
+							<identifier>
+								<name> direction </name>
+								<type> int </type>
+								<index> 4 </index>
+								<kind> field </kind>
+							</identifier>
+						</term>
+						<symbol> = </symbol>
+						<term>
+							<integerConstant> 1 </integerConstant>
+						</term>
+					</expression>
+					<symbol> ) </symbol>
+					<symbol> { </symbol>
+					<statements>
+						<letStatement>
+							<keyword> let </keyword>
+							<identifier>
+								<name> x </name>
+								<type> int </type>
+								<index> 0 </index>
+								<kind> field </kind>
+							</identifier>
+							<symbol> = </symbol>
+							<expression>
+								<term>
+									<identifier>
+										<name> x </name>
+										<type> int </type>
+										<index> 0 </index>
+										<kind> field </kind>
+									</identifier>
+								</term>
+								<symbol> - </symbol>
+								<term>
+									<integerConstant> 4 </integerConstant>
+								</term>
+							</expression>
+							<symbol> ; </symbol>
+						</letStatement>
+						<ifStatement>
+							<keyword> if </keyword>
+							<symbol> ( </symbol>
+							<expression>
+								<term>
+									<identifier>
+										<name> x </name>
+										<type> int </type>
+										<index> 0 </index>
+										<kind> field </kind>
+									</identifier>
+								</term>
+								<symbol> &lt; </symbol>
+								<term>
+									<integerConstant> 0 </integerConstant>
+								</term>
+							</expression>
+							<symbol> ) </symbol>
+							<symbol> { </symbol>
+							<statements>
+								<letStatement>
+									<keyword> let </keyword>
+									<identifier>
+										<name> x </name>
+										<type> int </type>
+										<index> 0 </index>
+										<kind> field </kind>
+									</identifier>
+									<symbol> = </symbol>
+									<expression>
+										<term>
+											<integerConstant> 0 </integerConstant>
+										</term>
+									</expression>
+									<symbol> ; </symbol>
+								</letStatement>
+							</statements>
+							<symbol> } </symbol>
+						</ifStatement>
+						<doStatement>
+							<keyword> do </keyword>
+							<identifier>
+								<name> Screen </name>
+								<type> className </type>
+							</identifier>
+							<symbol> . </symbol>
+							<identifier>
+								<name> setColor </name>
+								<type> subroutineName </type>
+							</identifier>
+							<symbol> ( </symbol>
+							<expressionList>
+								<expression>
+									<term>
+										<keyword> false </keyword>
+									</term>
+								</expression>
+							</expressionList>
+							<symbol> ) </symbol>
+							<symbol> ; </symbol>
+						</doStatement>
+						<doStatement>
+							<keyword> do </keyword>
+							<identifier>
+								<name> Screen </name>
+								<type> className </type>
+							</identifier>
+							<symbol> . </symbol>
+							<identifier>
+								<name> drawRectangle </name>
+								<type> subroutineName </type>
+							</identifier>
+							<symbol> ( </symbol>
+							<expressionList>
+								<expression>
+									<term>
+										<symbol> ( </symbol>
+										<expression>
+											<term>
+												<identifier>
+													<name> x </name>
+													<type> int </type>
+													<index> 0 </index>
+													<kind> field </kind>
+												</identifier>
+											</term>
+											<symbol> + </symbol>
+											<term>
+												<identifier>
+													<name> width </name>
+													<type> int </type>
+													<index> 2 </index>
+													<kind> field </kind>
+												</identifier>
+											</term>
+										</expression>
+										<symbol> ) </symbol>
+									</term>
+									<symbol> + </symbol>
+									<term>
+										<integerConstant> 1 </integerConstant>
+									</term>
+								</expression>
+								<symbol> , </symbol>
+								<expression>
+									<term>
+										<identifier>
+											<name> y </name>
+											<type> int </type>
+											<index> 1 </index>
+											<kind> field </kind>
+										</identifier>
+									</term>
+								</expression>
+								<symbol> , </symbol>
+								<expression>
+									<term>
+										<symbol> ( </symbol>
+										<expression>
+											<term>
+												<identifier>
+													<name> x </name>
+													<type> int </type>
+													<index> 0 </index>
+													<kind> field </kind>
+												</identifier>
+											</term>
+											<symbol> + </symbol>
+											<term>
+												<identifier>
+													<name> width </name>
+													<type> int </type>
+													<index> 2 </index>
+													<kind> field </kind>
+												</identifier>
+											</term>
+										</expression>
+										<symbol> ) </symbol>
+									</term>
+									<symbol> + </symbol>
+									<term>
+										<integerConstant> 4 </integerConstant>
+									</term>
+								</expression>
+								<symbol> , </symbol>
+								<expression>
+									<term>
+										<identifier>
+											<name> y </name>
+											<type> int </type>
+											<index> 1 </index>
+											<kind> field </kind>
+										</identifier>
+									</term>
+									<symbol> + </symbol>
+									<term>
+										<identifier>
+											<name> height </name>
+											<type> int </type>
+											<index> 3 </index>
+											<kind> field </kind>
+										</identifier>
+									</term>
+								</expression>
+							</expressionList>
+							<symbol> ) </symbol>
+							<symbol> ; </symbol>
+						</doStatement>
+						<doStatement>
+							<keyword> do </keyword>
+							<identifier>
+								<name> Screen </name>
+								<type> className </type>
+							</identifier>
+							<symbol> . </symbol>
+							<identifier>
+								<name> setColor </name>
+								<type> subroutineName </type>
+							</identifier>
+							<symbol> ( </symbol>
+							<expressionList>
+								<expression>
+									<term>
+										<keyword> true </keyword>
+									</term>
+								</expression>
+							</expressionList>
+							<symbol> ) </symbol>
+							<symbol> ; </symbol>
+						</doStatement>
+						<doStatement>
+							<keyword> do </keyword>
+							<identifier>
+								<name> Screen </name>
+								<type> className </type>
+							</identifier>
+							<symbol> . </symbol>
+							<identifier>
+								<name> drawRectangle </name>
+								<type> subroutineName </type>
+							</identifier>
+							<symbol> ( </symbol>
+							<expressionList>
+								<expression>
+									<term>
+										<identifier>
+											<name> x </name>
+											<type> int </type>
+											<index> 0 </index>
+											<kind> field </kind>
+										</identifier>
+									</term>
+								</expression>
+								<symbol> , </symbol>
+								<expression>
+									<term>
+										<identifier>
+											<name> y </name>
+											<type> int </type>
+											<index> 1 </index>
+											<kind> field </kind>
+										</identifier>
+									</term>
+								</expression>
+								<symbol> , </symbol>
+								<expression>
+									<term>
+										<identifier>
+											<name> x </name>
+											<type> int </type>
+											<index> 0 </index>
+											<kind> field </kind>
+										</identifier>
+									</term>
+									<symbol> + </symbol>
+									<term>
+										<integerConstant> 3 </integerConstant>
+									</term>
+								</expression>
+								<symbol> , </symbol>
+								<expression>
+									<term>
+										<identifier>
+											<name> y </name>
+											<type> int </type>
+											<index> 1 </index>
+											<kind> field </kind>
+										</identifier>
+									</term>
+									<symbol> + </symbol>
+									<term>
+										<identifier>
+											<name> height </name>
+											<type> int </type>
+											<index> 3 </index>
+											<kind> field </kind>
+										</identifier>
+									</term>
+								</expression>
+							</expressionList>
+							<symbol> ) </symbol>
+							<symbol> ; </symbol>
+						</doStatement>
+					</statements>
+					<symbol> } </symbol>
+					<keyword> else </keyword>
+					<symbol> { </symbol>
+					<statements>
+						<letStatement>
+							<keyword> let </keyword>
+							<identifier>
+								<name> x </name>
+								<type> int </type>
+								<index> 0 </index>
+								<kind> field </kind>
+							</identifier>
+							<symbol> = </symbol>
+							<expression>
+								<term>
+									<identifier>
+										<name> x </name>
+										<type> int </type>
+										<index> 0 </index>
+										<kind> field </kind>
+									</identifier>
+								</term>
+								<symbol> + </symbol>
+								<term>
+									<integerConstant> 4 </integerConstant>
+								</term>
+							</expression>
+							<symbol> ; </symbol>
+						</letStatement>
+						<ifStatement>
+							<keyword> if </keyword>
+							<symbol> ( </symbol>
+							<expression>
+								<term>
+									<symbol> ( </symbol>
+									<expression>
+										<term>
+											<identifier>
+												<name> x </name>
+												<type> int </type>
+												<index> 0 </index>
+												<kind> field </kind>
+											</identifier>
+										</term>
+										<symbol> + </symbol>
+										<term>
+											<identifier>
+												<name> width </name>
+												<type> int </type>
+												<index> 2 </index>
+												<kind> field </kind>
+											</identifier>
+										</term>
+									</expression>
+									<symbol> ) </symbol>
+								</term>
+								<symbol> &gt; </symbol>
+								<term>
+									<integerConstant> 511 </integerConstant>
+								</term>
+							</expression>
+							<symbol> ) </symbol>
+							<symbol> { </symbol>
+							<statements>
+								<letStatement>
+									<keyword> let </keyword>
+									<identifier>
+										<name> x </name>
+										<type> int </type>
+										<index> 0 </index>
+										<kind> field </kind>
+									</identifier>
+									<symbol> = </symbol>
+									<expression>
+										<term>
+											<integerConstant> 511 </integerConstant>
+										</term>
+										<symbol> - </symbol>
+										<term>
+											<identifier>
+												<name> width </name>
+												<type> int </type>
+												<index> 2 </index>
+												<kind> field </kind>
+											</identifier>
+										</term>
+									</expression>
+									<symbol> ; </symbol>
+								</letStatement>
+							</statements>
+							<symbol> } </symbol>
+						</ifStatement>
+						<doStatement>
+							<keyword> do </keyword>
+							<identifier>
+								<name> Screen </name>
+								<type> className </type>
+							</identifier>
+							<symbol> . </symbol>
+							<identifier>
+								<name> setColor </name>
+								<type> subroutineName </type>
+							</identifier>
+							<symbol> ( </symbol>
+							<expressionList>
+								<expression>
+									<term>
+										<keyword> false </keyword>
+									</term>
+								</expression>
+							</expressionList>
+							<symbol> ) </symbol>
+							<symbol> ; </symbol>
+						</doStatement>
+						<doStatement>
+							<keyword> do </keyword>
+							<identifier>
+								<name> Screen </name>
+								<type> className </type>
+							</identifier>
+							<symbol> . </symbol>
+							<identifier>
+								<name> drawRectangle </name>
+								<type> subroutineName </type>
+							</identifier>
+							<symbol> ( </symbol>
+							<expressionList>
+								<expression>
+									<term>
+										<identifier>
+											<name> x </name>
+											<type> int </type>
+											<index> 0 </index>
+											<kind> field </kind>
+										</identifier>
+									</term>
+									<symbol> - </symbol>
+									<term>
+										<integerConstant> 4 </integerConstant>
+									</term>
+								</expression>
+								<symbol> , </symbol>
+								<expression>
+									<term>
+										<identifier>
+											<name> y </name>
+											<type> int </type>
+											<index> 1 </index>
+											<kind> field </kind>
+										</identifier>
+									</term>
+								</expression>
+								<symbol> , </symbol>
+								<expression>
+									<term>
+										<identifier>
+											<name> x </name>
+											<type> int </type>
+											<index> 0 </index>
+											<kind> field </kind>
+										</identifier>
+									</term>
+									<symbol> - </symbol>
+									<term>
+										<integerConstant> 1 </integerConstant>
+									</term>
+								</expression>
+								<symbol> , </symbol>
+								<expression>
+									<term>
+										<identifier>
+											<name> y </name>
+											<type> int </type>
+											<index> 1 </index>
+											<kind> field </kind>
+										</identifier>
+									</term>
+									<symbol> + </symbol>
+									<term>
+										<identifier>
+											<name> height </name>
+											<type> int </type>
+											<index> 3 </index>
+											<kind> field </kind>
+										</identifier>
+									</term>
+								</expression>
+							</expressionList>
+							<symbol> ) </symbol>
+							<symbol> ; </symbol>
+						</doStatement>
+						<doStatement>
+							<keyword> do </keyword>
+							<identifier>
+								<name> Screen </name>
+								<type> className </type>
+							</identifier>
+							<symbol> . </symbol>
+							<identifier>
+								<name> setColor </name>
+								<type> subroutineName </type>
+							</identifier>
+							<symbol> ( </symbol>
+							<expressionList>
+								<expression>
+									<term>
+										<keyword> true </keyword>
+									</term>
+								</expression>
+							</expressionList>
+							<symbol> ) </symbol>
+							<symbol> ; </symbol>
+						</doStatement>
+						<doStatement>
+							<keyword> do </keyword>
+							<identifier>
+								<name> Screen </name>
+								<type> className </type>
+							</identifier>
+							<symbol> . </symbol>
+							<identifier>
+								<name> drawRectangle </name>
+								<type> subroutineName </type>
+							</identifier>
+							<symbol> ( </symbol>
+							<expressionList>
+								<expression>
+									<term>
+										<symbol> ( </symbol>
+										<expression>
+											<term>
+												<identifier>
+													<name> x </name>
+													<type> int </type>
+													<index> 0 </index>
+													<kind> field </kind>
+												</identifier>
+											</term>
+											<symbol> + </symbol>
+											<term>
+												<identifier>
+													<name> width </name>
+													<type> int </type>
+													<index> 2 </index>
+													<kind> field </kind>
+												</identifier>
+											</term>
+										</expression>
+										<symbol> ) </symbol>
+									</term>
+									<symbol> - </symbol>
+									<term>
+										<integerConstant> 3 </integerConstant>
+									</term>
+								</expression>
+								<symbol> , </symbol>
+								<expression>
+									<term>
+										<identifier>
+											<name> y </name>
+											<type> int </type>
+											<index> 1 </index>
+											<kind> field </kind>
+										</identifier>
+									</term>
+								</expression>
+								<symbol> , </symbol>
+								<expression>
+									<term>
+										<identifier>
+											<name> x </name>
+											<type> int </type>
+											<index> 0 </index>
+											<kind> field </kind>
+										</identifier>
+									</term>
+									<symbol> + </symbol>
+									<term>
+										<identifier>
+											<name> width </name>
+											<type> int </type>
+											<index> 2 </index>
+											<kind> field </kind>
+										</identifier>
+									</term>
+								</expression>
+								<symbol> , </symbol>
+								<expression>
+									<term>
+										<identifier>
+											<name> y </name>
+											<type> int </type>
+											<index> 1 </index>
+											<kind> field </kind>
+										</identifier>
+									</term>
+									<symbol> + </symbol>
+									<term>
+										<identifier>
+											<name> height </name>
+											<type> int </type>
+											<index> 3 </index>
+											<kind> field </kind>
+										</identifier>
+									</term>
+								</expression>
+							</expressionList>
+							<symbol> ) </symbol>
+							<symbol> ; </symbol>
+						</doStatement>
+					</statements>
+					<symbol> } </symbol>
+				</ifStatement>
+				<returnStatement>
+					<keyword> return </keyword>
+					<symbol> ; </symbol>
+				</returnStatement>
+			</statements>
+			<symbol> } </symbol>
+		</subroutineBody>
+	</subroutineDec>
+	<symbol> } </symbol>
+</class>

@@ -1,0 +1,130 @@
+<class>
+	<keyword> class </keyword>
+	<identifier>
+		<name> Main </name>
+		<type> className </type>
+		<fieldCount> 0 </fieldCount>
+	</identifier>
+	<symbol> { </symbol>
+	<subroutineDec>
+		<keyword> function </keyword>
+		<keyword> void </keyword>
+		<identifier>
+			<name> main </name>
+			<type> subroutineName </type>
+			<localCount> 1 </localCount>
+		</identifier>
+		<symbol> ( </symbol>
+		<parameterList>
+		</parameterList>
+		<symbol> ) </symbol>
+		<subroutineBody>
+			<symbol> { </symbol>
+			<varDec>
+				<keyword> var </keyword>
+				<identifier>
+					<name> PongGame </name>
+					<type> className </type>
+				</identifier>
+				<identifier>
+					<name> game </name>
+					<type> PongGame </type>
+					<index> 0 </index>
+					<kind> local </kind>
+				</identifier>
+				<symbol> ; </symbol>
+			</varDec>
+			<statements>
+				<doStatement>
+					<keyword> do </keyword>
+					<identifier>
+						<name> PongGame </name>
+						<type> className </type>
+					</identifier>
+					<symbol> . </symbol>
+					<identifier>
+						<name> newInstance </name>
+						<type> subroutineName </type>
+					</identifier>
+					<symbol> ( </symbol>
+					<expressionList>
+					</expressionList>
+					<symbol> ) </symbol>
+					<symbol> ; </symbol>
+				</doStatement>
+				<letStatement>
+					<keyword> let </keyword>
+					<identifier>
+						<name> game </name>
+						<type> PongGame </type>
+						<index> 0 </index>
+						<kind> local </kind>
+					</identifier>
+					<symbol> = </symbol>
+					<expression>
+						<term>
+							<identifier>
+								<name> PongGame </name>
+								<type> className </type>
+							</identifier>
+							<symbol> . </symbol>
+							<identifier>
+								<name> getInstance </name>
+								<type> subroutineName </type>
+							</identifier>
+							<symbol> ( </symbol>
+							<expressionList>
+							</expressionList>
+							<symbol> ) </symbol>
+						</term>
+					</expression>
+					<symbol> ; </symbol>
+				</letStatement>
+				<doStatement>
+					<keyword> do </keyword>
+					<identifier>
+						<name> game </name>
+						<type> PongGame </type>
+						<index> 0 </index>
+						<kind> local </kind>
+					</identifier>
+					<symbol> . </symbol>
+					<identifier>
+						<name> run </name>
+						<type> subroutineName </type>
+					</identifier>
+					<symbol> ( </symbol>
+					<expressionList>
+					</expressionList>
+					<symbol> ) </symbol>
+					<symbol> ; </symbol>
+				</doStatement>
+				<doStatement>
+					<keyword> do </keyword>
+					<identifier>
+						<name> game </name>
+						<type> PongGame </type>
+						<index> 0 </index>
+						<kind> local </kind>
+					</identifier>
+					<symbol> . </symbol>
+					<identifier>
+						<name> dispose </name>
+						<type> subroutineName </type>
+					</identifier>
+					<symbol> ( </symbol>
+					<expressionList>
+					</expressionList>
+					<symbol> ) </symbol>
+					<symbol> ; </symbol>
+				</doStatement>
+				<returnStatement>
+					<keyword> return </keyword>
+					<symbol> ; </symbol>
+				</returnStatement>
+			</statements>
+			<symbol> } </symbol>
+		</subroutineBody>
+	</subroutineDec>
+	<symbol> } </symbol>
+</class>
