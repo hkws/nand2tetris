@@ -11,9 +11,10 @@ class Main {
         var String s;
         var String i;
         
+        /*
         let s = String.new(0); // a zero-capacity string should be supported
         do s.dispose();
-
+        */
         let s = String.new(6); // capacity 6, make sure that length 5 is displayed
         let s = s.appendChar(97);
         let s = s.appendChar(98);
@@ -23,13 +24,13 @@ class Main {
         do Output.printString("new,appendChar: ");
         do Output.printString(s);                // new, appendChar: abcde
         do Output.println();
-    
+        
         let i = String.new(6);
         do i.setInt(12345);
         do Output.printString("setInt: ");
         do Output.printString(i);                // setInt: 12345
         do Output.println();
-
+        
         do i.setInt(-32767);
         do Output.printString("setInt: ");
         do Output.printString(i);                // setInt: -32767
@@ -62,7 +63,7 @@ class Main {
         do Output.printString("intValue: ");
         do Output.printInt(s.intValue());        // intValue: -32123
         do Output.println();
-        
+
         do Output.printString("backSpace: ");
         do Output.printInt(String.backSpace());  // backSpace: 129
         do Output.println();
