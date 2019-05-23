@@ -15,6 +15,7 @@ class Main {
     	do s.appendChar(String.doubleQuote());
     
         do Output.moveCursor(0, 63);
+
         do Output.printChar(66);
         do Output.moveCursor(22, 0);
         do Output.printChar(67);
