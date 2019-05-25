@@ -36,8 +36,8 @@ return
 function Ball.show 0
 push argument 0
 pop pointer 0
-push constant 1
-neg
+push constant 0
+not
 call Screen.setColor 1
 pop temp 0
 push pointer 0
@@ -105,8 +105,9 @@ push local 1
 lt
 pop this 7
 push this 7
-not
-if-goto FALSE0
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
 push local 0
 pop local 2
 push local 1
@@ -121,8 +122,8 @@ push this 0
 push argument 1
 lt
 pop this 9
-goto END0
-label FALSE0
+goto IF_END0
+label IF_FALSE0
 push this 0
 push argument 1
 lt
@@ -131,7 +132,7 @@ push this 1
 push argument 2
 lt
 pop this 9
-label END0
+label IF_END0
 push constant 2
 push local 1
 call Math.multiply 2
@@ -159,139 +160,142 @@ pop temp 0
 push this 4
 push constant 0
 lt
-not
-if-goto FALSE1
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
 push this 4
 push this 5
 add
 pop this 4
-goto END1
-label FALSE1
+goto IF_END0
+label IF_FALSE0
 push this 4
 push this 6
 add
 pop this 4
 push this 9
-not
-if-goto FALSE2
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
 push this 7
-not
-if-goto FALSE3
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
 push this 0
 push constant 4
 add
 pop this 0
-goto END3
-label FALSE3
+goto IF_END2
+label IF_FALSE2
 push this 1
 push constant 4
 add
 pop this 1
-label END3
-goto END2
-label FALSE2
+label IF_END2
+goto IF_END1
+label IF_FALSE1
 push this 7
-not
-if-goto FALSE4
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
 push this 0
 push constant 4
 sub
 pop this 0
-goto END4
-label FALSE4
+goto IF_END3
+label IF_FALSE3
 push this 1
 push constant 4
 sub
 pop this 1
-label END4
-label END2
-label END1
+label IF_END3
+label IF_END1
+label IF_END0
 push this 8
-not
-if-goto FALSE5
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
 push this 7
-not
-if-goto FALSE6
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
 push this 1
 push constant 4
 add
 pop this 1
-goto END6
-label FALSE6
+goto IF_END5
+label IF_FALSE5
 push this 0
 push constant 4
 add
 pop this 0
-label END6
-goto END5
-label FALSE5
+label IF_END5
+goto IF_END4
+label IF_FALSE4
 push this 7
-not
-if-goto FALSE7
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
 push this 1
 push constant 4
 sub
 pop this 1
-goto END7
-label FALSE7
+goto IF_END6
+label IF_FALSE6
 push this 0
 push constant 4
 sub
 pop this 0
-label END7
-label END5
+label IF_END6
+label IF_END4
 push this 0
 push this 10
 gt
 not
-not
-if-goto FALSE8
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
 push constant 1
 pop this 14
 push this 10
 pop this 0
-goto END8
-label FALSE8
-label END8
+label IF_FALSE7
 push this 0
 push this 11
 lt
 not
-not
-if-goto FALSE9
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
 push constant 2
 pop this 14
 push this 11
 pop this 0
-goto END9
-label FALSE9
-label END9
+label IF_FALSE8
 push this 1
 push this 12
 gt
 not
-not
-if-goto FALSE10
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
 push constant 3
 pop this 14
 push this 12
 pop this 1
-goto END10
-label FALSE10
-label END10
+label IF_FALSE9
 push this 1
 push this 13
 lt
 not
-not
-if-goto FALSE11
+if-goto IF_TRUE10
+goto IF_FALSE10
+label IF_TRUE10
 push constant 4
 pop this 14
 push this 13
 pop this 1
-goto END11
-label FALSE11
-label END11
+label IF_FALSE10
 push pointer 0
 call Ball.show 1
 pop temp 0
@@ -311,12 +315,13 @@ pop local 3
 push argument 1
 push constant 0
 eq
-not
-if-goto FALSE12
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
 push constant 10
 pop local 4
-goto END12
-label FALSE12
+goto IF_END0
+label IF_FALSE0
 push this 2
 push constant 0
 lt
@@ -334,21 +339,23 @@ neg
 eq
 and
 or
-not
-if-goto FALSE13
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
 push constant 20
 pop local 4
-goto END13
-label FALSE13
+goto IF_END1
+label IF_FALSE1
 push constant 5
 pop local 4
-label END13
-label END12
+label IF_END1
+label IF_END0
 push this 14
 push constant 1
 eq
-not
-if-goto FALSE14
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
 push constant 506
 pop local 0
 push local 3
@@ -364,13 +371,14 @@ push local 4
 call Math.multiply 2
 add
 pop local 1
-goto END14
-label FALSE14
+goto IF_END2
+label IF_FALSE2
 push this 14
 push constant 2
 eq
-not
-if-goto FALSE15
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
 push constant 0
 pop local 0
 push local 3
@@ -385,13 +393,14 @@ push local 4
 call Math.multiply 2
 add
 pop local 1
-goto END15
-label FALSE15
+goto IF_END3
+label IF_FALSE3
 push this 14
 push constant 3
 eq
-not
-if-goto FALSE16
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
 push constant 250
 pop local 1
 push local 2
@@ -407,8 +416,8 @@ push local 4
 call Math.multiply 2
 add
 pop local 0
-goto END16
-label FALSE16
+goto IF_END4
+label IF_FALSE4
 push constant 0
 pop local 1
 push local 2
@@ -423,9 +432,9 @@ push local 4
 call Math.multiply 2
 add
 pop local 0
-label END16
-label END15
-label END14
+label IF_END4
+label IF_END3
+label IF_END2
 push pointer 0
 push local 0
 push local 1

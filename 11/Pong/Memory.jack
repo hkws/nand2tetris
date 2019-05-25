@@ -1,0 +1,136 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/12/Memory.jack
+
+/**
+ * This library provides two services: direct access to the computer's main
+ * memory (RAM), and allocation and recycling of memory blocks. The Hack RAM
+ * consists of 32,768 words, each holding a 16-bit binary number.
+ */ 
+class Memory {
+
+    static Array memory;
+    static Array freeList;
+    static int LENGTH;
+    static int NEXT_PTR;
+    static int HEAP_STARTS;
+    static int HEAP_ENDS;
+    static int ALLOC_LENGTH;
+
+    /** Initializes the class. */
+    function void init() {
+        
+        let memory = 0;
+        
+        // initialize constants
+        let LENGTH = 0;
+        let NEXT_PTR = 1;
+        let HEAP_STARTS = 2048;
+        let HEAP_ENDS = 16384;
+        let ALLOC_LENGTH = 0;
+
+        // initialize free list
+        let freeList = HEAP_STARTS; // base address of freeList
+        let freeList[LENGTH] = HEAP_ENDS - HEAP_STARTS;
+        let freeList[NEXT_PTR] = null;
+        return;
+    }
+
+    /** Returns the RAM value at the given address. */
+    function int peek(int address) {
+        return memory[address];
+    }
+
+    /** Sets the RAM value at the given address to the given value. */
+    function void poke(int address, int value) {
+        let memory[address] = value;
+        return;
+    }
+
+    /** Finds an available RAM block of the given size and returns
+     *  a reference to its base address. */
+    function int alloc(int size) {
+
+        var Array curr_base, prev_base, allocated_block_base;
+        var int curr_size;
+        let curr_base = freeList;
+        let curr_size = freeList[LENGTH];
+        let prev_base = null;
+        
+        // first-fit algorithm
+        // +1 is necessary for memorize allocated block length
+        // -2 is necessary for free list header (length contains free list header)
+        while ((curr_size-2) < size+1){
+            let prev_base = curr_base;
+            let curr_base = curr_base[NEXT_PTR];
+            let curr_size = curr_base[LENGTH];
+            if (curr_base = null){
+                return null;
+            }
+        }
+
+        // update freelist
+        // next_ptrがあり、listをまるっと割り当てる場合
+        // -> prev listのnext_ptrをcurr_listのnext_ptrに設定、
+        //    allocated_baseはそのままcurr_baseで、allocated_base[length]を更新してallocated_base+1を返す
+        // next_ptrがない（最初のfreeListもしくはfreeListの末尾）listまるっと割り当て
+        // -> 前のlistのnext_ptrをcurr_listのnext_ptr(null)に設定、
+        //    allocated_baseはそのままcurr_baseで、allocated_base[length]を更新してallocated_base+1を返す
+        // next_ptrがあり、listを分割する場合 -> 今のlistのlengthを更新、allocated_baseはcurr_base + 更新後length、
+        //                                   allocated_base[length]を更新してallocated_base+1を返す
+        // next_ptrがなく、listを分割する場合 -> 今のlistのlengthを更新、allocated_baseはcurr_base + 更新後length
+        //                                   allocated_base[length]を更新してallocated_base+1を返す
+        //
+        if (curr_base[LENGTH] > size + 1 + 2){  // + 2 is current length and next_ptr
+            let curr_base[LENGTH] = curr_base[LENGTH] - (size + 1); // NOTE: curr_base[LENGTH] contains header
+            let allocated_block_base = curr_base + curr_base[LENGTH];
+            let allocated_block_base[LENGTH] = size + 1;
+            return allocated_block_base + 1;
+        } else {
+            if (prev_base = null){ // the number of items of freeList is 1 (beginning)
+                return null; // requested size is larger than heap size
+            } else {
+                let prev_base[NEXT_PTR] = curr_base[NEXT_PTR];
+                let allocated_block_base = curr_base;
+                let allocated_block_base[LENGTH] = size + 1;
+                return allocated_block_base + 1;
+            }
+        }
+    }
+
+    /** De-allocates the given object (cast as an array) by making
+     *  it available for future allocations. */
+    function void deAlloc(Array o) {
+
+        var Array object_base, prev_base, next_base;
+        var int object_length;
+        let object_base = o - 1;
+        let object_length = object_base[ALLOC_LENGTH]; 
+        let prev_base = freeList;
+
+        // search previous block
+        while( ~(prev_base[NEXT_PTR] = null) & (prev_base[NEXT_PTR] < object_base)){
+            let prev_base = prev_base[NEXT_PTR];
+        }
+
+        // concatenate if possible
+        if (prev_base + prev_base[LENGTH] = object_base){
+            let prev_base[LENGTH] = prev_base[LENGTH] + object_length;
+        } else { // else update previous block next_ptr, and update length and next_ptr of the given object
+            let object_base[LENGTH] = object_length;
+            let object_base[NEXT_PTR] = prev_base[NEXT_PTR];
+            let prev_base[NEXT_PTR] = object_base;
+        }
+
+        // concatenate blocks updated prev_base block and original prev_base[NEXT_PTR]
+        // blockA(free), blockB(used), blockC(free) -> blockA+B(free), blockC(free) -> blockA+B+C(free)
+        let next_base = prev_base[NEXT_PTR];
+        if (prev_base + prev_base[LENGTH] = next_base){
+            let prev_base[LENGTH] = prev_base[LENGTH] + next_base[LENGTH];
+            let prev_base[NEXT_PTR] = next_base[NEXT_PTR];
+        }
+
+        return;
+    }    
+}
